@@ -1,18 +1,21 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <html>
 <head>
-       <link rel="stylesheet" href="style.css">
+    <style>
+
+</style>
+
 <meta charset="utf-8">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
-    </head>
+  <link rel="stylesheet" href="style.css">
+       <title>Login</title> 
+</head>
  <body>
     <title id="companyTitle"> Ascension Systems</title>
-    <title>Login</title>  
+ 
     <div id="main">
                 <h1>Login</h1>
                 <div id="login">
@@ -28,19 +31,23 @@
    
 <script>
 $('body').terminal({
-    hello: function(what) {
-        this.echo('Hello, ' + what +
-                  '. Wellcome to this terminal.');
-    }
-}, {
-    greetings: 'My First Web Terminal'
-});
+            iam: function (name) {
+                this.echo('Hello, ' + name +
+                    '. Welcome to the Ascension Systems Terminal');
+            },
+            LASTUSER: function () {
+                this.echo('The Time Traveler');
+            },
+            help: function () {
+                this.echo('iam - iam command and '
+                +'pass your name as argument\n'
+                +'founder to know the founder');
+            },
+        }, {
+            greetings: 'Ascension Systems '
+            +'LAST MESSAGE NA/NA/802,701 AD, please type your name below with the prefix iam'
+          
+        });
 </script>
     </head>
     </body>
-</html>
-    
-    
-    
-    
-    
