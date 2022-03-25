@@ -11,14 +11,6 @@
 <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
   <link rel="stylesheet" href="style.css">
-    <style type="text/css">
-.terminal,span,.cmd,div { 
-    --color: rgba(0, 128, 0, 0.99);
-}
-.terminal, span {
-    --size: 1.4;
-}
-</style>
        <title>Login</title> 
 </head>
  <body>
@@ -39,21 +31,21 @@
    
 <script>
 $('body').terminal({
-            iam: function (name) {
+            name: function (name) {
                 this.echo('Hello, ' + name +
                     '. Welcome to the Ascension Systems Terminal');
             },
-            LASTUSER: function () {
+            lastuser: function () {
                 this.echo('The Time Traveler');
             },
             help: function () {
                 this.echo('iam - iam command and '
-                +'pass your name as argument\n'
-                +'founder to know the founder');
+                +'pass your name as argument\n'          
+                +'lastuser to know the last person who accessed this terminal ');
             },
         }, {
             greetings: 'Ascension Systems '
-            +'LAST MESSAGE NA/NA/802,701 AD, please type your name below with the prefix iam'
+            +'Copyright, Ascension Systems 1875-1997, type HELP for help with using this terminal. Please type your name below with the prefix name ex.name John Doe'
           
         });
 </script>
