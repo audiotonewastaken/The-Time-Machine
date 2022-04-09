@@ -1,51 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
-<head>
+  <html>
+    <head>
+      <title>Ascension Systems</title>
+    </head>
     <style type="text/css">
-.terminal,span,.cmd,div { 
-    --color: rgba(0, 128, 0, 0.99);
-}
-.terminal, span {
-    --size: 1.4;
-}
-</style>
+      .terminal,
+      span {
+        --size: 1.4;
+      }
+    </style>
 
-<meta charset="utf-8">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
-  <link rel="stylesheet" href="style.css">
-  
-       <title>Login</title> 
-</head>
- <body>
-    <title id="companyTitle"> Ascension Systems</title>
- 
-   
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-<script>
-$('body').terminal({
+    <title>Login</title>
+
+    <body>
+      <title id="companyTitle">Ascension Systems</title>
+
+      <script>
+        $("body").terminal(
+          {
+            image1: function (){              
+              this.echo( $('<img src="slide1.png">')
+              );
+            },
+            image2: function (){              
+              this.echo( $('<img src="slide2.png">')
+              );
+            },
+            image3: function (){              
+              this.echo( $('<img src="slide3.png">')
+              );
+            },
+            image4: function (){              
+              this.echo( $('<img src="slide4.png">')
+              );
+            },
+            image5: function (){              
+              this.echo( $('<img src="slide5.png">')
+              );
+            },
+            image6: function (){              
+              this.echo( $('<img src="slide6.png">')
+              );
+            },
             name: function (name) {
-                this.echo('Hello, ' + name +
-                    '. Welcome to the Ascension Systems Terminal');
+              this.echo(
+                "Hello, " + name + ". Welcome to the Ascension Systems Terminal"
+              );
             },
             lastuser: function () {
-                this.echo('The Time Traveler');
+              this.echo("The Time Traveler");
             },
-   lastaccessed: function () {
-                this.echo('802,701 AD by The Time Traveler');
+            lastaccessed: function () {
+              this.echo("802,701 AD by The Time Traveler");
             },
             help: function () {
-                this.echo('name - name command and '
-                +'pass your name as argument\n'          
-                +'lastuser to know the last person who accessed this terminal\n');
+              this.echo(
+                "name - name command and " +
+                  "pass your name as argument\n" +
+                  "lastuser to know the last person who accessed this terminal\n"
+              );
             },
-        }, {
-            greetings: 'Ascension Systems '
-            +'Copyright, Ascension Systems 1875-1997, type HELP for help with using this terminal. Please type your name below with the prefix name ex.name John Doe'
+          },
+          {
+            greetings:
+              "Ascension Systems " +
+              "Copyright, Ascension Systems 1875-1997, type HELP for help with using this terminal. Please type your name below with the prefix name ex.name John Doe",
+          }
+        );
+   
           
-        });
-</script>
-    </head>
+        
+      </script>
     </body>
+  </html>
+</html>
